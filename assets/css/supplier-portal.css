@@ -1,0 +1,39 @@
+.supplier-portal-navbar .theme-toggle-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+}
+.supplier-nav-link {
+    display: inline-flex;
+    min-height: 2.625rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 9999px;
+    color: #d6d3d1;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+.supplier-nav-link:hover { color: #fff; background: rgba(41, 48, 62, 0.72); }
+.supplier-nav-link[aria-current="page"] {
+    color: #fcd34d;
+    border-color: rgba(245, 158, 11, 0.32);
+    background: rgba(245, 158, 11, 0.11);
+}
+.supplier-nav-link:focus-visible { outline: 2px solid #f59e0b; outline-offset: 2px; }
+.supplier-po-table-container { max-width: 100%; overscroll-behavior-x: contain; }
+.theme-light .supplier-nav-link { color: #526174; }
+.theme-light .supplier-nav-link:hover { color: #202938; background: #e7ebf1; }
+.theme-light .supplier-nav-link[aria-current="page"] {
+    color: #92400e;
+    border-color: rgba(217, 119, 6, 0.4);
+    background: rgba(217, 119, 6, 0.11);
+}
+@media (min-width: 640px) {
+    .supplier-nav-link { padding-left: 0.875rem; padding-right: 0.875rem; font-size: 0.8125rem; }
+}
+@media (prefers-reduced-motion: reduce) { .supplier-nav-link { transition: none; } }

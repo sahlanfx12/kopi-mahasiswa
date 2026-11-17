@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000">
+  <style>
+    text{font-family:Arial,sans-serif;fill:#e7e5e4}.muted{fill:#a8a29e}.subtle{fill:#78716c}.title{font-size:30px;font-weight:700;fill:#fff}.section{font-size:16px;font-weight:700;fill:#fff}.label{font-size:12px;font-weight:700;letter-spacing:1px}.body{font-size:14px}.small{font-size:11px}.mono{font-family:Consolas,monospace}
+  </style>
+  <rect width="1440" height="1000" fill="#090c12"/>
+  <rect x="0" y="0" width="1440" height="76" fill="#0e131d"/>
+  <path d="M0 75.5H1440" stroke="#292524"/>
+  <rect x="52" y="20" width="36" height="36" rx="11" fill="#f59e0b"/>
+  <text x="70" y="44" text-anchor="middle" font-size="21" font-weight="700" fill="#090c12">K</text>
+  <text x="101" y="43" font-size="18" font-weight="700" fill="#fff">Kopi Mahasiswa</text>
+  <text x="1375" y="43" text-anchor="end" class="small muted">UI FOUNDATION · DARK THEME</text>
+  <text x="64" y="135" class="title">Design system</text>
+  <text x="64" y="160" class="body muted">Token visual yang dirangkum dari halaman Admin, Customer, Kasir, Supplier, dan Owner.</text>
+
+  <text x="64" y="216" class="section">Color palette</text>
+  <g>
+    <rect x="64" y="238" width="205" height="112" rx="14" fill="#090c12" stroke="#292524"/>
+    <text x="82" y="275" class="label muted">CANVAS</text><text x="82" y="320" class="mono body">#090C12</text>
+    <rect x="285" y="238" width="205" height="112" rx="14" fill="#0e131d" stroke="#292524"/>
+    <text x="303" y="275" class="label muted">SURFACE</text><text x="303" y="320" class="mono body">#0E131D</text>
+    <rect x="506" y="238" width="205" height="112" rx="14" fill="#141b29" stroke="#292524"/>
+    <text x="524" y="275" class="label muted">SURFACE RAISED</text><text x="524" y="320" class="mono body">#141B29</text>
+    <rect x="727" y="238" width="205" height="112" rx="14" fill="#f59e0b"/>
+    <text x="745" y="275" class="label" fill="#451a03">PRIMARY · AMBER</text><text x="745" y="320" class="mono body" fill="#451a03">#F59E0B</text>
+    <rect x="948" y="238" width="205" height="112" rx="14" fill="#34d399"/>
+    <text x="966" y="275" class="label" fill="#052e16">SUCCESS</text><text x="966" y="320" class="mono body" fill="#052e16">#34D399</text>
+    <rect x="1169" y="238" width="205" height="112" rx="14" fill="#fb7185"/>
+    <text x="1187" y="275" class="label" fill="#4c0519">DANGER</text><text x="1187" y="320" class="mono body" fill="#4c0519">#FB7185</text>
+  </g>
+  <g>
+    <rect x="64" y="364" width="205" height="72" rx="12" fill="#131926" stroke="#292524"/>
+    <text x="82" y="393" class="label muted">INPUT</text><text x="82" y="418" class="mono small">#131926</text>
+    <rect x="285" y="364" width="205" height="72" rx="12" fill="#1a2233" stroke="#292524"/>
+    <text x="303" y="393" class="label muted">HOVER / ALT</text><text x="303" y="418" class="mono small">#1A2233</text>
+    <rect x="506" y="364" width="205" height="72" rx="12" fill="#e7e5e4"/>
+    <text x="524" y="393" class="label" fill="#292524">TEXT PRIMARY</text><text x="524" y="418" class="mono small" fill="#292524">#E7E5E4</text>
+    <rect x="727" y="364" width="205" height="72" rx="12" fill="#a8a29e"/>
+    <text x="745" y="393" class="label" fill="#292524">TEXT SECONDARY</text><text x="745" y="418" class="mono small" fill="#292524">#A8A29E</text>
+    <rect x="948" y="364" width="205" height="72" rx="12" fill="#38bdf8"/>
+    <text x="966" y="393" class="label" fill="#082f49">INFO</text><text x="966" y="418" class="mono small" fill="#082f49">#38BDF8</text>
+    <rect x="1169" y="364" width="205" height="72" rx="12" fill="#a78bfa"/>
+    <text x="1187" y="393" class="label" fill="#2e1065">INSIGHT / PO</text><text x="1187" y="418" class="mono small" fill="#2e1065">#A78BFA</text>
+  </g>
+
+  <text x="64" y="493" class="section">Typography &amp; hierarchy</text>
+  <rect x="64" y="514" width="640" height="190" rx="16" fill="#0e131d" stroke="#292524"/>
+  <text x="90" y="555" font-size="28" font-weight="700" fill="#fff">Page title · 24–30 px / Bold</text>
+  <text x="90" y="590" font-size="18" font-weight="700" fill="#fff">Section heading · 14–18 px / Bold</text>
+  <text x="90" y="622" font-size="14" fill="#e7e5e4">Body and controls · 12–14 px / Regular</text>
+  <text x="90" y="651" font-size="11" fill="#a8a29e">Helper text and metadata · 10–12 px / Regular</text>
+  <text x="90" y="681" class="mono small muted">Numeric totals and IDs use monospaced numerals.</text>
+  <rect x="726" y="514" width="648" height="190" rx="16" fill="#0e131d" stroke="#292524"/>
+  <text x="752" y="551" class="label muted">FONT STACK</text>
+  <text x="752" y="580" class="body">UI sans-serif; numeric data uses monospace.</text>
+  <text x="752" y="625" class="label muted">CONTENT STYLE</text>
+  <text x="752" y="654" class="body">Bahasa Indonesia, concise labels, Rupiah (Rp), date-led metadata.</text>
+  <text x="752" y="682" class="small subtle">SVG fallback: Arial / sans-serif; Consolas / monospace.</text>
+
+  <text x="64" y="758" class="section">Shape, spacing &amp; feedback</text>
+  <rect x="64" y="780" width="318" height="142" rx="16" fill="#0e131d" stroke="#292524"/>
+  <rect x="88" y="806" width="104" height="42" rx="10" fill="#f59e0b"/>
+  <text x="211" y="824" class="body">Control radius: 8–12 px</text><text x="211" y="846" class="small muted">Card radius: 16–24 px</text>
+  <text x="88" y="884" class="small muted">Rounded corners, thin stone borders, soft shadow.</text>
+  <rect x="398" y="780" width="468" height="142" rx="16" fill="#0e131d" stroke="#292524"/>
+  <text x="424" y="815" class="label muted">SPACING RHYTHM</text>
+  <g fill="#f59e0b"><rect x="424" y="837" width="8" height="8" rx="2"/><rect x="448" y="837" width="16" height="8" rx="2"/><rect x="480" y="837" width="24" height="8" rx="2"/><rect x="520" y="837" width="32" height="8" rx="2"/></g>
+  <text x="424" y="872" class="small muted">8 · 16 · 24 · 32 px base increments</text>
+  <text x="424" y="898" class="small subtle">Content max width follows the existing wide desktop layouts.</text>
+  <rect x="882" y="780" width="492" height="142" rx="16" fill="#0e131d" stroke="#292524"/>
+  <text x="908" y="815" class="label muted">STATUS COLOR SEMANTICS</text>
+  <circle cx="920" cy="850" r="6" fill="#fbbf24"/><text x="936" y="854" class="small">Menunggu / perhatian</text>
+  <circle cx="1080" cy="850" r="6" fill="#38bdf8"/><text x="1096" y="854" class="small">Konfirmasi / informasi</text>
+  <circle cx="920" cy="883" r="6" fill="#34d399"/><text x="936" y="887" class="small">Selesai / sehat</text>
+  <circle cx="1080" cy="883" r="6" fill="#fb7185"/><text x="1096" y="887" class="small">Batal / stok kritis</text>
+  <text x="64" y="963" class="small subtle">Token dikonsolidasikan untuk handoff desain; role badge dapat memakai biru, ungu, atau cyan sesuai konteks yang ada.</text>
+</svg>

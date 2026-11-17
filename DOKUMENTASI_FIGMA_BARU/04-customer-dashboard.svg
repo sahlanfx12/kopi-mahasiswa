@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000">
+  <style>text{font-family:Arial,sans-serif;fill:#e7e5e4}.muted{fill:#a8a29e}.subtle{fill:#78716c}.small{font-size:11px}.body{font-size:14px}.title{font-size:27px;font-weight:700;fill:#fff}.section{font-size:18px;font-weight:700;fill:#fff}.mono{font-family:Consolas,monospace}</style>
+  <rect width="1440" height="1000" fill="#090c12"/><rect width="1440" height="78" fill="#0e131d"/><path d="M0 77H1440" stroke="#292524"/>
+  <rect x="44" y="20" width="38" height="38" rx="12" fill="#f59e0b"/><text x="63" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#090c12">K</text><text x="94" y="44" font-size="17" font-weight="700" fill="#fff">Kopi Mahasiswa</text><rect x="260" y="26" width="92" height="22" rx="11" fill="#f59e0b" fill-opacity=".12" stroke="#f59e0b" stroke-opacity=".35"/><text x="306" y="41" text-anchor="middle" class="small" fill="#fbbf24">PELANGGAN</text>
+  <rect x="418" y="20" width="96" height="38" rx="9" fill="#f59e0b" fill-opacity=".1" stroke="#f59e0b" stroke-opacity=".4"/><text x="466" y="44" text-anchor="middle" class="small" fill="#fbbf24">Dashboard</text><text x="540" y="44" class="small muted">Katalog Menu</text><text x="649" y="44" class="small muted">Riwayat Pesanan</text><text x="782" y="44" class="small muted">Keranjang  2</text><text x="892" y="44" class="small muted">Notifikasi</text>
+  <circle cx="1150" cy="39" r="5" fill="#34d399"/><text x="1164" y="44" class="small muted">Halo, Budi</text><rect x="1304" y="25" width="84" height="28" rx="8" fill="#fb7185" fill-opacity=".1" stroke="#fb7185" stroke-opacity=".35"/><text x="1346" y="43" text-anchor="middle" class="small" fill="#fb7185">Keluar</text>
+  <rect x="52" y="112" width="1336" height="398" rx="24" fill="#0e131d" stroke="#292524"/>
+  <circle cx="1268" cy="230" r="155" fill="#f59e0b" fill-opacity=".035"/><circle cx="1326" cy="183" r="94" fill="#f59e0b" fill-opacity=".035"/>
+  <rect x="92" y="153" width="194" height="30" rx="15" fill="#f59e0b" fill-opacity=".1" stroke="#f59e0b" stroke-opacity=".3"/><text x="189" y="173" text-anchor="middle" class="small" fill="#fbbf24">✦  Selamat datang kembali</text>
+  <text x="92" y="244" class="title" font-size="39">Halo, Budi Mahasiswa!</text><text x="92" y="284" class="body muted">Ingin kopi racikan barista hari ini?</text><text x="92" y="309" class="body muted">Pesan online tanpa antre, lacak status racikan, dan ambil saat siap dinikmati.</text>
+  <rect x="92" y="350" width="238" height="54" rx="13" fill="#f59e0b"/><text x="211" y="383" text-anchor="middle" font-size="13" font-weight="700" fill="#090c12">☕  Buka Katalog Menu</text>
+  <rect x="345" y="350" width="214" height="54" rx="13" fill="#141b29" stroke="#44403c"/><text x="452" y="383" text-anchor="middle" font-size="13" font-weight="700">◷  Riwayat Pesanan</text>
+  <text x="92" y="458" class="small subtle">Pesan kopi dan kudapan favoritmu dengan mudah.</text>
+  <text x="52" y="565" class="section">Mulai dari sini</text><text x="1388" y="564" text-anchor="end" class="small muted">Pintasan pelanggan</text>
+  <rect x="52" y="590" width="648" height="220" rx="20" fill="#0e131d" stroke="#292524"/>
+  <rect x="82" y="622" width="62" height="62" rx="18" fill="#f59e0b" fill-opacity=".1" stroke="#f59e0b" stroke-opacity=".2"/><text x="113" y="663" text-anchor="middle" font-size="28" fill="#fbbf24">☕</text>
+  <text x="170" y="643" font-size="20" font-weight="700" fill="#fff">Katalog Menu &amp; Racikan</text><text x="170" y="672" class="small muted">Jelajahi minuman kopi, non-kopi, dan kudapan.</text><text x="170" y="694" class="small muted">Pilih produk lalu tambahkan ke keranjang.</text>
+  <text x="170" y="754" font-size="12" font-weight="700" fill="#fbbf24">Pesan sekarang  →</text>
+  <rect x="732" y="590" width="656" height="220" rx="20" fill="#0e131d" stroke="#292524"/>
+  <rect x="762" y="622" width="62" height="62" rx="18" fill="#38bdf8" fill-opacity=".1" stroke="#38bdf8" stroke-opacity=".2"/><text x="793" y="663" text-anchor="middle" font-size="25" fill="#38bdf8">▤</text>
+  <text x="850" y="643" font-size="20" font-weight="700" fill="#fff">Lacak Pesanan Saya</text><text x="850" y="672" class="small muted">Pantau proses pesanan: menunggu, disiapkan, hingga</text><text x="850" y="694" class="small muted">siap diambil di outlet. Riwayat menampilkan rincian item.</text>
+  <text x="850" y="754" font-size="12" font-weight="700" fill="#38bdf8">Lihat riwayat  →</text>
+  <rect x="52" y="840" width="1336" height="84" rx="16" fill="#0e131d" stroke="#292524"/>
+  <circle cx="91" cy="882" r="19" fill="#f59e0b" fill-opacity=".13"/><text x="91" y="888" text-anchor="middle" font-size="18" fill="#fbbf24">i</text><text x="125" y="877" font-size="13" font-weight="700">Pesanan berjalan?</text><text x="125" y="899" class="small muted">Status dan rincian pesanan dapat dilihat dari menu Riwayat Pesanan.</text><text x="1357" y="887" text-anchor="end" class="small" fill="#fbbf24">Riwayat Pesanan →</text>
+  <text x="52" y="965" class="small subtle">Sumber halaman: customer/index.php dan customer/header.php. Mockup merepresentasikan dashboard desktop.</text>
+</svg>

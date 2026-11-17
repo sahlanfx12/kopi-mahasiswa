@@ -1,0 +1,57 @@
+# Local database configuration and environment values
+/config.php
+/.env
+/.env.*
+!/.env.example
+
+# Local authentication/session artifacts
+/admin_cookie.txt
+/cookies.txt
+/customer_cookies.txt
+/sup_cookie.txt
+/session/
+/var/sessions/
+
+# Internal audit document; do not publish
+/AUDIT_KESESUAIAN_KOPI_MAHASISWA.md
+
+# Out-of-scope Manager role (not part of the five project roles)
+/manager/
+
+# Local dependencies, test cache, and temporary files
+/vendor/
+/.phpunit.cache/
+/.cache/
+/cache/
+/tmp/
+/temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Local database exports; preserve the project's schema and migrations
+*.sql
+!/database/schema.sql
+!/database/migrations/*.sql
+*.sqlite
+*.dump
+*.sql.gz
+
+# Old code snapshots
+*.bak*
+*.log
+
+# Manual diagnostics and mutating development scripts (not runtime entry points)
+/check.php
+/check2.php
+/db_audit.php
+/test_db.php
+/test_flow.php
+/test_po_flow.php
+/test_hash.php
+/fix_db.php
+/update_images.php

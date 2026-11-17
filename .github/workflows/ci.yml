@@ -1,0 +1,40 @@
+name: Kopi Mahasiswa CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up PHP 8.3 and Composer 2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer:v2
+          extensions: curl, dom, mbstring, mysqli, openssl, xml, xmlwriter
+          coverage: none
+
+      - name: Resolve and install dependencies without a lock file
+        run: composer update --no-interaction --prefer-dist --no-progress --no-scripts --no-plugins --no-lock
+
+      - name: Verify PHPUnit version
+        run: |
+          version="$(vendor/bin/phpunit --version)"
+          echo "$version"
+          [[ "$version" =~ ^PHPUnit\ 10\.5\. ]]
+
+      - name: Run Unit Tests
+        env:
+          PHPUNIT_AUTOLOAD: "${{ github.workspace }}/vendor/autoload.php"
+        run: composer test
