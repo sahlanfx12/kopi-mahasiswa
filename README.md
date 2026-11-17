@@ -1,54 +1,101 @@
 # Kopi Mahasiswa
 
-Kopi Mahasiswa is a PHP web application for managing coffee shop operations. The project includes administration, customer, cashier, supplier, and owner workflows, along with a five-role AI assistant.
+## Informasi Proyek
 
-## Technology
+| Keterangan | Informasi |
+|---|---|
+| Nama | Muhammad Sahlan Habibi |
+| NIM | 41257136 |
+| Kelas | TI 1B |
+| Semester | 3 |
+| Mata kuliah | Rekayasa Perangkat Lunak |
+| Tema proyek | Kopi Mahasiswa |
+| Pengerjaan | Individu |
+| Kelompok (jika diwajibkan) | Belum diketahui — isi sesuai arahan dosen |
 
-- PHP 8.3 is used by the GitHub Actions workflow.
-- MySQL is accessed through PHP MySQLi.
-- The application also uses browser-based HTML, CSS, and JavaScript assets.
-- PHPUnit 10.5 is used for the isolated unit test suite.
+## Deskripsi
 
-## Requirements
+Kopi Mahasiswa adalah aplikasi web untuk mendukung operasional kedai kopi. Aplikasi menyediakan alur kerja untuk pengelolaan produk dan stok, pemesanan pelanggan, transaksi kasir, pengadaan dari supplier, serta pemantauan dan pelaporan oleh owner.
 
-- PHP 8.3 with `mysqli`, `curl`, `openssl`, and `mbstring` enabled.
-- MySQL or a compatible MySQL server.
+### Lima Role
+
+- **Admin:** mengelola produk, kategori, persediaan, supplier, purchase order, pesanan, dan notifikasi.
+- **Customer:** melihat menu, mengelola keranjang, melakukan pemesanan, dan melihat riwayat pesanan.
+- **Kasir:** memproses penjualan melalui POS, mengelola transaksi dan status pesanan, serta melihat atau mencetak struk.
+- **Supplier:** melihat purchase order yang terkait dan memperbarui status pengiriman.
+- **Owner:** memantau dashboard dan KPI serta melihat laporan penjualan.
+
+### Chatbot AI
+
+Aplikasi menyediakan chatbot AI untuk kelima role: Admin, Customer, Kasir, Supplier, dan Owner. Tiap role memiliki endpoint dan konteks bantuan yang disesuaikan dengan tugasnya. Koneksi chatbot memerlukan konfigurasi provider AI yang valid.
+
+## Teknologi
+
+- PHP Native 8.3
+- MySQL dengan MySQLi
+- Composer 2 untuk pengelolaan dependency
+- PHPUnit 10.5 untuk automated test
+- HTML, CSS, dan JavaScript untuk antarmuka web
+
+## Instalasi dan Setup Lokal
+
+### Persyaratan
+
+- PHP 8.3 dengan ekstensi `mysqli`, `curl`, `openssl`, dan `mbstring`.
+- MySQL yang kompatibel.
 - Composer 2.
 
-The PHPUnit development dependency also requires the PHP extensions declared by PHPUnit; the CI workflow enables the XML-related extensions it needs.
+### Langkah Setup
 
-## Local database configuration
+1. Clone repository dan masuk ke folder proyek.
+2. Pasang dependency yang versinya dikunci oleh `composer.lock`:
 
-1. Copy `config.example.php` to `config.php`.
-2. Edit `config.php` locally and replace all placeholders with the local database host, username, password, and database name. The schema and migration scripts expect the database name `kopi_mahasiswa`.
-3. Ensure the local MySQL connection settings used by `migrate.php` and `migrate_manager.php` have permission to create and update that database.
-4. From the project root, run `php migrate.php` to create the database schema, then run `php migrate_manager.php` to add shared permissions, activity, and notification tables used by the application. Both scripts are CLI-only.
-5. Apply the SQL files under `database/migrations/` only when their changes are not already present, in filename/date order.
-6. Run `php setup_owner.php` from a terminal and create the first Owner using a new name, email, and password. Then sign in with that Owner account.
+   ```sh
+   composer install
+   ```
 
-Do not commit `config.php`, local environment files, cookie files, or credentials. The provided `config.php` is intentionally excluded by `.gitignore`; `config.example.php` contains placeholders only.
+3. Salin `config.example.php` menjadi `config.php`, lalu isi konfigurasi koneksi MySQL lokal. Schema aplikasi menggunakan database `kopi_mahasiswa`.
+4. Dari terminal pada folder proyek, jalankan skrip migrasi CLI:
 
-The root-level migration scripts execute schema changes when run and must not be exposed as public web endpoints. `setup_owner.php` is also CLI-only; it creates an Owner only when no Owner exists and does not change existing accounts. No demo user accounts or default passwords are installed.
+   ```sh
+   php migrate.php
+   php migrate_manager.php
+   ```
 
-## Composer and unit tests
+5. Periksa perubahan yang diperlukan pada file di `database/migrations/` dan terapkan hanya migrasi yang belum ada pada database lokal.
+6. Buat Owner pertama melalui terminal:
 
-Install the Composer dependencies and run the unit suite from the project root:
+   ```sh
+   php setup_owner.php
+   ```
+
+   Ikuti prompt untuk mengisi nama, email, dan password. Skrip ini hanya membuat Owner jika belum ada; tidak tersedia akun demo atau password default.
+7. Jalankan aplikasi menggunakan web server PHP lokal, kemudian masuk dengan akun Owner yang dibuat.
+
+`migrate.php`, `migrate_manager.php`, dan `setup_owner.php` adalah skrip CLI; jangan jadikan endpoint publik. Jangan commit `config.php`, password, API key, token, atau rahasia lain.
+
+## Pengujian
+
+Jalankan automated test dari root proyek:
 
 ```sh
-composer install
 composer test
 ```
 
-The test suite is configured by `phpunit.xml` and currently constrains PHPUnit to `10.5.*`. Unit tests use synthetic input and do not require a database or external API.
+Workflow GitHub Actions menggunakan PHP 8.3, Composer 2, PHPUnit 10.5, dan layanan MySQL sementara untuk integration test.
 
-There is currently no committed `composer.lock`. Until a lockfile is generated and committed, dependency resolution may select different compatible transitive versions between installations.
+**Hasil CI untuk commit 552b777:** 81 PASS, 0 FAIL, 0 ERROR, 0 SKIPPED, 141 assertions.
 
-## GitHub Actions
+[Lihat hasil GitHub Actions](https://github.com/sahlanfx12/kopi-mahasiswa/actions/runs/44108639683).
 
-`.github/workflows/ci.yml` runs the unit tests on pushes, pull requests, and manual dispatch. It uses Ubuntu, PHP 8.3, Composer 2, and verifies the PHPUnit 10.5 version before running `composer test`.
+Cakupan automated test meliputi helper, guard metode dan role endpoint chatbot, serta query notifikasi pada database test. Hasil ini tidak menyatakan seluruh alur bisnis telah diuji end-to-end; alur UI seperti checkout, POS, dan proses bisnis lainnya perlu diperiksa terpisah.
 
-The current workflow resolves dependencies without a lockfile. CI therefore runs the test suite but is not yet fully reproducible. Once network access permits Composer to create a valid lockfile, commit it and update the workflow to use `composer install`.
+## Video Presentasi Final
 
-## Publishing and credentials
+Satu video gabungan untuk presentasi final sesuai arahan dosen.
 
-Do not publish real API keys, database credentials, OTP or encryption secrets, access tokens, or authentication cookies. Keep local values in ignored configuration or environment files and use GitHub Actions Secrets for credentials required by a workflow. Review backups, uploaded files, and manual database utilities before publishing.
+**URL video:** *(unggah video, lalu tempelkan URL di sini)*
+
+## Repository
+
+[https://github.com/sahlanfx12/kopi-mahasiswa](https://github.com/sahlanfx12/kopi-mahasiswa)
