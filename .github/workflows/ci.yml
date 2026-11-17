@@ -25,8 +25,8 @@ jobs:
           extensions: curl, dom, mbstring, mysqli, openssl, xml, xmlwriter
           coverage: none
 
-      - name: Resolve and install dependencies without a lock file
-        run: composer update --no-interaction --prefer-dist --no-progress --no-scripts --no-plugins --no-lock
+      - name: Update dependencies without scripts or plugins
+        run: composer update --no-interaction --prefer-dist --no-progress --no-scripts --no-plugins
 
       - name: Verify PHPUnit version
         run: |
