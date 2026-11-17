@@ -13,5 +13,8 @@
         <testsuite name="Kopi Mahasiswa Unit Tests">
             <directory>tests/Unit</directory>
         </testsuite>
+        <testsuite name="Kopi Mahasiswa Integration Tests">
+            <directory>tests/Integration</directory>
+        </testsuite>
     </testsuites>
 </phpunit>

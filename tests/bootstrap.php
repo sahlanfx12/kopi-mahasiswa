@@ -29,3 +29,4 @@ require_once $projectRoot . '/includes/otp_service.php';
 require_once $projectRoot . '/includes/integration_settings.php';
 require_once $projectRoot . '/includes/notification_center.php';
 require_once $projectRoot . '/includes/interaction_ui.php';
+require_once $projectRoot . '/includes/ai_service.php';

@@ -10,8 +10,23 @@ permissions:
 
 jobs:
   unit-tests:
-    name: Unit Tests
+    name: Unit and Integration Tests
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_DATABASE: kopi_mahasiswa_test
+          MYSQL_USER: kopi_test
+          MYSQL_PASSWORD: kopi_test_only_password
+          MYSQL_ROOT_PASSWORD: kopi_test_root_only_password
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -ukopi_test -pkopi_test_only_password"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=20
 
     steps:
       - name: Check out repository
@@ -25,8 +40,8 @@ jobs:
           extensions: curl, dom, mbstring, mysqli, openssl, xml, xmlwriter
           coverage: none
 
-      - name: Update dependencies without scripts or plugins
-        run: composer update --no-interaction --prefer-dist --no-progress --no-scripts --no-plugins
+      - name: Install locked dependencies without scripts or plugins
+        run: composer install --no-interaction --prefer-dist --no-progress --no-scripts --no-plugins
 
       - name: Verify PHPUnit version
         run: |
@@ -34,7 +49,12 @@ jobs:
           echo "$version"
           [[ "$version" =~ ^PHPUnit\ 10\.5\. ]]
 
-      - name: Run Unit Tests
+      - name: Run Unit and Integration Tests
         env:
           PHPUNIT_AUTOLOAD: "${{ github.workspace }}/vendor/autoload.php"
+          KM_TEST_DB_NAME: kopi_mahasiswa_test
+          KM_TEST_DB_HOST: 127.0.0.1
+          KM_TEST_DB_PORT: "3306"
+          KM_TEST_DB_USER: kopi_test
+          KM_TEST_DB_PASSWORD: kopi_test_only_password
         run: composer test
