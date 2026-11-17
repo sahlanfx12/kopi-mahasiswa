@@ -94,7 +94,7 @@ Cakupan automated test meliputi helper, guard metode dan role endpoint chatbot, 
 
 Satu video gabungan untuk presentasi final sesuai arahan dosen.
 
-**URL video:** *(unggah video, lalu tempelkan URL di sini)*
+**URL video:** [Presentasi Proyek Akhir RPL — Kopi Mahasiswa](https://youtube.com/watch?v=xENWH5R8JZM)
 
 ## Repository
 
