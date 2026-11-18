@@ -94,8 +94,7 @@ Cakupan automated test meliputi helper, guard metode dan role endpoint chatbot, 
 
 Satu video gabungan untuk presentasi final sesuai arahan dosen.
 
-**URL video:** [Presentasi Proyek Akhir RPL — Kopi Mahasiswa](https://youtube.com/watch?v=xENWH5R8JZM)
-
+**URL video:** ((https://youtu.be/LELkGFb-1tI))
 ## Repository
 
 [https://github.com/sahlanfx12/kopi-mahasiswa](https://github.com/sahlanfx12/kopi-mahasiswa)
